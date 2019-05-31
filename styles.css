@@ -20,6 +20,10 @@ body::-webkit-scrollbar-thumb {
     margin : 5em 5em;
 }
 
+.has-text-pink {
+    color : #f77ad4;
+}
+
 .am {
     color : #fb9ce1;
     font-size : 5em;
@@ -29,6 +33,9 @@ body::-webkit-scrollbar-thumb {
     display : block;
 }
 
+.background :hover {
+    background-color: blue;
+}
 
 #starfieldContainer {
     height: 100vh;
@@ -42,4 +49,8 @@ body::-webkit-scrollbar-thumb {
     text-align: center;
     /* bottom:63vh; */
     font-size: 2.7em;
+}
+
+.divide {
+    margin-top : 2em;
 }
