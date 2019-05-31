@@ -16,7 +16,7 @@ const displaySkills = (skillSet) => {
 
     skillSet.map(skill => {
         let item = document.createElement('p');
-        item.classList.add('has-text-light')
+        item.classList.add('has-text-light', 'is-size-5')
         item.innerText = skill;
         display.appendChild(item);
     })

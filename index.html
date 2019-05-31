@@ -10,7 +10,7 @@
     <title>Alecx Moritz</title>
 </head>
 
-<body class="has-background-black-ter">
+<body class="has-background-black-ter" onresize="checkDisplay()">
     <section class="hero has-white-text-ter has-background-black is-fullheight">
         <div class="hero-body">
             <canvas id="starfield"></canvas>
@@ -21,64 +21,15 @@
         </div>
     
     </section>
-    <section class="section projects">
-        <div class="container">
-            <h1 class="title is-1 has-text-pink">Recent Projects</h1>
 
-            <!-- project one -->
-            <div class="columns has-text-light divide">
-                <div class="column">
-                    <figure class="image">
-                        <img src="./assets/photomax90-sized.png"/>
-                    </figure>
-                </div>
-                <div class="column">
-                    <h1 class="title has-text-light is-2">PhotoMax 90</h1>
-                    <h2 class="subtitle has-text-light is-4">Instagram Clone</h2>
-                    <p class="is-size-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod placeat quas odit dolorum ducimus ipsa dolorem? Beatae omnis atque, vitae aliquam, tenetur alias et iste libero accusantium architecto magni quae? Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, placeat! A vitae ipsum velit quo quaerat ullam similique omnis ratione quibusdam officiis qui corrupti magni, laudantium deleniti rem eveniet nesciunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure consectetur maxime vel, iste facilis sint odit unde nemo doloremque, natus pariatur ipsum quod reprehenderit omnis reiciendis, hic aliquid accusamus quis?</p>
-                </div>
-            </div>
-            <!-- project two -->
-            <div class="columns has-text-light divide">
-                <div class="column">
-                    <h1 class="title has-text-light is-2">Xpedite CLI</h1>
-                    <h1 class="subtitle has-text-light is-4">Express & Sequelize Scaffolding Tool</h1>
-                    <p class="is-size-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod placeat quas odit dolorum ducimus ipsa dolorem? Beatae omnis atque, vitae aliquam, tenetur alias et iste libero accusantium architecto magni quae? Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, placeat! A vitae ipsum velit quo quaerat ullam similique omnis ratione quibusdam officiis qui corrupti magni, laudantium deleniti rem eveniet nesciunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure consectetur maxime vel, iste facilis sint odit unde nemo doloremque, natus pariatur ipsum quod reprehenderit omnis reiciendis, hic aliquid accusamus quis?</p>
-                </div>
-                <div class="column">
-                    <figure class="image is-5by3">
-                        <img src="./assets/xpedite-cli-sized.png"/>
-                    </figure>
-                </div>
-            </div>
-            <!-- project three -->
-            <div class="columns has-text-light divide">
-                <div class="column">
-                    <figure class="image is-5by3">
-                        <img src="./assets/showster-sized.png"/>
-                    </figure>
-                </div>
-                <div class="column">
-                    <h1 class="title has-text-light">Showster</h1>
-                    <h1 class="subtitle has-text-light">Angular CRUD App</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod placeat quas odit dolorum ducimus ipsa dolorem? Beatae omnis atque, vitae aliquam, tenetur alias et iste libero accusantium architecto magni quae? Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, placeat! A vitae ipsum velit quo quaerat ullam similique omnis ratione quibusdam officiis qui corrupti magni, laudantium deleniti rem eveniet nesciunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure consectetur maxime vel, iste facilis sint odit unde nemo doloremque, natus pariatur ipsum quod reprehenderit omnis reiciendis, hic aliquid accusamus quis?</p>
-                </div>
-            </div>
-            <!-- project four -->
-            <div class="columns has-text-light divide">
-                <div class="column">
-                    <h1 class="title has-text-light">shadr</h1>
-                    <h1 class="subtitle has-text-light">Twitter Clone</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod placeat quas odit dolorum ducimus ipsa dolorem? Beatae omnis atque, vitae aliquam, tenetur alias et iste libero accusantium architecto magni quae? Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, placeat! A vitae ipsum velit quo quaerat ullam similique omnis ratione quibusdam officiis qui corrupti magni, laudantium deleniti rem eveniet nesciunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure consectetur maxime vel, iste facilis sint odit unde nemo doloremque, natus pariatur ipsum quod reprehenderit omnis reiciendis, hic aliquid accusamus quis?</p>
-                </div>
-                <div class="column">
-                    <figure class="image is-5by3">
-                        <img src="./assets/shadr-sized.png"/>
-                    </figure>
-                </div>
+    <section class="section">
+        <div class="container">
+            <h1 class="title has-text-pink is-1">Recent Projects</h1>
+            <div class="container" id="projectSection">
+    
             </div>
         </div>
-    </section>
+        </section>
     <!-- skills -->
     <section class="section">
         <div class="container">
@@ -88,36 +39,29 @@
                     <div class="">
                         <p class="has-text-light">Skill Set</p>
                         <ul>
-                            <li onclick="setSkills('javascript')"><a class=" has-text-light" >JavaScript</a></li>
-                            <li onclick="setSkills('dotnet')"><a class=" has-text-light" >.NET</a></li>
-                            <li onclick="setSkills('frontend')"><a class=" has-text-light" >Front End</a></li>
-                            <li onclick="setSkills('tools')"><a class=" has-text-light" >Tools</a></li>
+                            <li onclick="setSkills('javascript')"><a class=" has-text-light is-size-5" >JavaScript</a></li>
+                            <li onclick="setSkills('dotnet')"><a class=" has-text-light is-size-5" >.NET</a></li>
+                            <li onclick="setSkills('frontend')"><a class=" has-text-light is-size-5" >Front End</a></li>
+                            <li onclick="setSkills('tools')"><a class=" has-text-light is-size-5" >Tools</a></li>
                         </ul>
                     </div>
                 </div>
-                <div class="column" id="skillDisplay" class=" has-text-light" ></div>
+                <div class="column" id="skillDisplay" class=" has-text-light is-size-5" ></div>
             </div>
 
         </div>
     </section>
+
     <!-- about -->
     <section class="section">
         <div class="container">
             <h1 class="title is-1 has-text-pink">About</h1>
             <div class="columns has-text-light">
                 <div class="column">
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio nam eos odit neque molestias consequuntur aut! Deserunt, in fuga autem perferendis vel excepturi quae iusto obcaecati optio reprehenderit! Quas, ab. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos aspernatur obcaecati nam, perferendis adipisci deserunt. Quaerat tenetur, ut neque voluptatibus inventore blanditiis! Quo pariatur nisi quis dolores repellat esse accusantium? Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni dolorum modi dolor reprehenderit ea doloremque expedita illum sapiente sit voluptas dolore architecto consequatur fuga, suscipit deleniti ducimus molestiae nemo aliquid. Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio dolore minima aliquid voluptas mollitia. Tempora, illum beatae doloribus cupiditate tempore veniam vitae error excepturi dolores commodi iure accusantium aperiam id.</p>
-                </div>
-                <div class="column">
-                    <p>image</p>
-                </div>
-            </div>
-            <div class="columns has-text-light">
-                <div class="column">
                     <p>image</p>
                 </div>
                 <div class="column">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam aspernatur itaque nostrum commodi autem quos reiciendis quisquam, officiis iusto repellendus dolore libero cumque doloribus expedita corporis placeat fugiat. Accusamus, explicabo. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda, ea facilis numquam quaerat nisi architecto distinctio fugit porro blanditiis quos consequatur odio sint provident recusandae harum quis! Ut, deserunt quis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, omnis sunt! Magnam natus laboriosam quidem perspiciatis doloremque! Distinctio, deleniti adipisci enim ex iste ducimus esse ab, delectus ipsam ipsa quam. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam eaque consequuntur consectetur, labore officiis eos distinctio enim quia, vel, quae sint dolorem animi libero ratione natus eveniet expedita. Expedita, quasi.</p>
+                    <p class="is-size-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio nam eos odit neque molestias consequuntur aut! Deserunt, in fuga autem perferendis vel excepturi quae iusto obcaecati optio reprehenderit! Quas, ab. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos aspernatur obcaecati nam, perferendis adipisci deserunt. Quaerat tenetur, ut neque voluptatibus inventore blanditiis! Quo pariatur nisi quis dolores repellat esse accusantium? Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni dolorum modi dolor reprehenderit ea doloremque expedita illum sapiente sit voluptas dolore architecto consequatur fuga, suscipit deleniti ducimus molestiae nemo aliquid. Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio dolore minima aliquid voluptas mollitia. Tempora, illum beatae doloribus cupiditate tempore veniam vitae error excepturi dolores commodi iure accusantium aperiam id.</p>
                 </div>
             </div>
         </div>
@@ -167,15 +111,21 @@
     </section>
     <section>
         <footer class="footer has-background-black has-text-light">
-            <div class="content has-text-centered">
-                <p>
-                <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
-                <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
-                is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
-                </p>
+            
+            <div class="columns is-mobile is-multiline is-centered">
+                <div class="column is-half is-narrow">
+                    <p>Made with 💜 by Alecx Moritz</p>
+                </div>
+                <div class="column is-one-quarter is-narrow">
+                    Check me out on <a href="http://github.com/alecxmoritz" target="_blank" rel="noopener noreferrer">Github</a> too!
+                </div>
+                <div class="column is-one-quarter is-narrow">
+                    Alecx Moritz &copy; 2019
+                </div>
             </div>
         </footer>
     </section>
+    <script src="./scripts/projects.js"></script>
     <script src="./scripts/canvas.js"></script>
     <script src="./scripts/skills.js"></script>
 </body>
