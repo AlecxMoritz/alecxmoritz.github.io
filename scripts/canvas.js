@@ -1,7 +1,7 @@
 var colours = ['#3a3586','#aa66cc','#ddeffd','#0a47a1','#ecf0f1','#a2ded0'];
 var stars = [];
 
-var initialise = function(){
+var initialize = function(){
 	var canvas = document.getElementById('starfield'),
       context = canvas.getContext('2d');
 	
@@ -62,4 +62,4 @@ var draw = function() {
 	window.requestAnimationFrame(draw);
 };
 
-initialise();
+initialize();

@@ -5,12 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./lib/bulma.css">
+    <link rel="stylesheet" href="./lib/animate.css">
     <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Alecx Moritz</title>
 </head>
 
-<body class="has-background-black-ter" onresize="checkDisplay()">
+<body class="has-background-black-ter" onresize="checkDisplay(); resize()">
     <section class="hero has-white-text-ter has-background-black is-fullheight">
         <div class="hero-body">
             <canvas id="starfield"></canvas>
@@ -37,16 +39,26 @@
             <div class="columns">
                 <div class="column">
                     <div class="">
-                        <p class="has-text-light">Skill Set</p>
                         <ul>
-                            <li onclick="setSkills('javascript')"><a class=" has-text-light is-size-5" >JavaScript</a></li>
-                            <li onclick="setSkills('dotnet')"><a class=" has-text-light is-size-5" >.NET</a></li>
-                            <li onclick="setSkills('frontend')"><a class=" has-text-light is-size-5" >Front End</a></li>
-                            <li onclick="setSkills('tools')"><a class=" has-text-light is-size-5" >Tools</a></li>
+                            <li  onclick="setSkills('javascript', event)">
+                                <a id="javascript-header" class="is-size-5 skill-header" >JavaScript</a>
+                            </li>
+                            <li onclick="setSkills('dotnet', event)">
+                                <a id="dotnet-header" class="is-size-5 skill-header">.NET</a>
+                            </li>
+                            <li onclick="setSkills('frontend', event)">
+                                <a id="frontend-header" class="is-size-5 skill-header">Front End</a>
+                            </li>
+                            <li onclick="setSkills('tools', event)">
+                                <a id="tools-header" class="is-size-5 skill-header">Tools</a>
+                            </li>
+                            <li onclick="setSkills('misc', event)">
+                                <a id="misc-header" class="is-size-5 skill-header">Miscellaneous</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
-                <div class="column" id="skillDisplay" class=" has-text-light is-size-5" ></div>
+                <div id="skillDisplay" class="column has-text-light is-size-5" ></div>
             </div>
 
         </div>
@@ -56,9 +68,11 @@
     <section class="section">
         <div class="container">
             <h1 class="title is-1 has-text-pink">About</h1>
-            <div class="columns has-text-light">
+            <div class="columns has-text-light is-vcentered">
                 <div class="column">
-                    <p>image</p>
+                    <figure class="image is-square">
+                        <img src="./assets/Alecx-Moritz-800x800.jpg" alt="Alecx Moritz Headshot">
+                    </figure>
                 </div>
                 <div class="column">
                     <p class="is-size-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio nam eos odit neque molestias consequuntur aut! Deserunt, in fuga autem perferendis vel excepturi quae iusto obcaecati optio reprehenderit! Quas, ab. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos aspernatur obcaecati nam, perferendis adipisci deserunt. Quaerat tenetur, ut neque voluptatibus inventore blanditiis! Quo pariatur nisi quis dolores repellat esse accusantium? Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni dolorum modi dolor reprehenderit ea doloremque expedita illum sapiente sit voluptas dolore architecto consequatur fuga, suscipit deleniti ducimus molestiae nemo aliquid. Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio dolore minima aliquid voluptas mollitia. Tempora, illum beatae doloribus cupiditate tempore veniam vitae error excepturi dolores commodi iure accusantium aperiam id.</p>
@@ -69,38 +83,67 @@
 
     </section>
     <!-- contact -->
-    <section class="section">
+    <section class="section divide">
         <div class="container">
+            <h2 class="title has-text-pink is-1">Get In Touch</h2>
             <div class="columns">
                 <div class="column">
-                    <p>contact info</p>
+                    <div class="contact-methods">
+
+                            <div class="is-size-5 contact-option">
+                                <span class="icon is-large contact-icon">
+                                    <i class="fab fa-instagram"></i>
+                                </span>
+                                <a href="https://www.instagram.com/alecxmoritz/" target="_blank" rel="noopener noreferrer " class="contact-name" >@alecxmoritz</a>
+                            </div>
+
+
+                            <div class="is-size-5 contact-option">
+                                <span class="icon is-large contact-icon">
+                                    <i class="fab fa-linkedin"></i>
+                                </span>
+                                <a href="https://www.linkedin.com/in/alecx-moritz-81a1b615a/" target="_blank" class="contact-name">Alecx Moritz</a>
+                            </div>
+                            <div class="is-size-5 contact-option">
+                                <span class="icon is-large contact-icon">
+                                    <i class="fab fa-github"></i>
+                                </span>
+                                <a href="https://github.com/alecxMoritz/" target="_blank" class="contact-name">Alecx Moritz</a>
+                            </div>
+                            <div class="is-size-5 contact-option">
+                                <span class="icon is-large contact-icon">
+                                    <i class="fab fa-codepen"></i>
+                                </span>
+                                <a href="https://codepen.io/techno_zelda/" target="_blank" class="contact-name">techno_zelda</a>
+                            </div>
+
+                    </div>
                 </div>
                 <div class="column">
 
-                    <h2 class="title has-text-pink">Get In Contact With Me</h2>
                     <form action="https://formspree.io/alecxmoritz7@gmail.com" method="POST" class="form">
                         <div class="field">
-                            <label>Name</label>
+                            <label class="has-text-light label">Name</label>
                             <div class="control">
-                                <input name="name" class="input is-primary" type="text" placeholder="Your name" required />
+                                <input name="name" class="input is-medium" type="text" placeholder="Your name" required />
                             </div>
                         </div>
                         <div class="field">
                             <div class="control">
-                                <label>Email</label>
-                                <input name="email" class="input is-primary" type="email" placeholder="Your email address" required />
+                                <labe class="has-text-light label">Email</label>
+                                <input name="email" class="input is-medium" type="email" placeholder="Your email address" required />
                             </div>
                         </div>
                         <div class="field">
                             <div class="control">
-                                <label>Subject</label>
-                                <input name="subject" class="input is-primary" type="subject" placeholder="Message subject" required />
+                                <label class="has-text-light label">Subject</label>
+                                <input name="subject" class="input is-medium" type="subject" placeholder="Message subject" required />
                             </div>
                         </div>
                         <div class="field">
                             <div class="control">
-                                <label>Message</label>
-                                <textarea name="message" class="textarea is-primary" type="text" placeholder="Message" required ></textarea>
+                                <label class="has-text-light label">Message</label>
+                                <textarea name="message" class="textarea is-medium" type="text" placeholder="Message" required ></textarea>
                             </div>
                         </div>
                         <button class="button is-dark is-inverted is-outlined" type="submit">Send</button>
@@ -109,7 +152,7 @@
             </div>
         </div>
     </section>
-    <section>
+    <section class"divide">
         <footer class="footer has-background-black has-text-light">
             
             <div class="columns is-mobile is-multiline is-centered">
@@ -117,7 +160,7 @@
                     <p>Made with 💜 by Alecx Moritz</p>
                 </div>
                 <div class="column is-one-quarter is-narrow">
-                    Check me out on <a href="http://github.com/alecxmoritz" target="_blank" rel="noopener noreferrer">Github</a> too!
+                    Now on <a href="http://github.com/alecxmoritz" target="_blank" rel="noopener noreferrer" class="footer-link">YouTube</a>!
                 </div>
                 <div class="column is-one-quarter is-narrow">
                     Alecx Moritz &copy; 2019
@@ -125,8 +168,10 @@
             </div>
         </footer>
     </section>
+    <script src="https://kit.fontawesome.com/c3b777ded6.js"></script>
     <script src="./scripts/projects.js"></script>
     <script src="./scripts/canvas.js"></script>
+    <script src="./scripts/canvas-resize.js"></script>
     <script src="./scripts/skills.js"></script>
 </body>
 </html>
