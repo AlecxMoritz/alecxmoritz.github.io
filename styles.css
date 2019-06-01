@@ -33,9 +33,10 @@ body::-webkit-scrollbar-thumb {
     color : #fb9ce1;
     font-size : 5em;
     position : absolute;
-    left : 1em;
+    left : .5em;
     /* right : 50%; */
     display : block;
+    margin-right: .5em;
 }
 
 .background :hover {
@@ -45,6 +46,18 @@ body::-webkit-scrollbar-thumb {
 #starfieldContainer {
     height: 100vh;
     width : 100%;
+    padding : 0;
+}
+
+canvas {
+    margin : 0;
+    width : 100vw;
+    height : auto;
+    background : black;
+}
+
+.hero-body {
+    padding : 0;
 }
 
 #nameBrand {
