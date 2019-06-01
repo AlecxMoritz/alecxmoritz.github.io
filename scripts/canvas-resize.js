@@ -9,5 +9,5 @@ const resize = () => {
 }
 
 const resizeCanvas = () => {
-    initialize();
+    draw();
 }
