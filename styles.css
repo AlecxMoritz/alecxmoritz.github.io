@@ -124,3 +124,11 @@ body::-webkit-scrollbar-thumb {
 .footer-link:hover {
     color : #aa66cc
 }
+
+.resume-link {
+    color : #f77ad4;
+}
+
+.resume-link:hover {
+    color : #aa66cc;
+}

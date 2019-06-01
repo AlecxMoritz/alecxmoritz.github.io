@@ -3,7 +3,7 @@ const projects = [
         name : 'PhotoMax 90',
         tagline : 'Instagram Clone',
         image : './assets/photomax90-sized.png',
-        text : 'This is a full stack PERN web app, and can be viewed comfortably on both mobile and web. The back end has a postgres database, and uses Sequelize to communicate with it, and Express to handle end point logic and resource routing. For more backend logic, it pulls in Jsonwebtoken, Bcryptjs, dotenv, and body-parser. The front end is a React client using Material UI for the interface. This project was inspired by Instagram, and the could-be-complexities of image uploading. PhotoMax relies on an AWS S3 bucket, the middleware for the backend stores the image in S3, records the location, the client is then able to use this location to host the image out of AWS. Resulting is direct file uploads that are always accessible.'
+        text : 'This is a full stack PERN web app, and can be viewed comfortably on both mobile and web. The back end has a postgres database, and uses Sequelize to communicate with it, and Express to handle end point logic and resource routing. For more backend logic, it pulls in Jsonwebtoken, Bcryptjs, dotenv, and body-parser. The front end is a React client using Material UI for the interface. This project was inspired by Instagram, and the could-be-complexities of image uploading. PhotoMax relies on an AWS S3 bucket and Multer middleware, allowing for direct file uploads that are always accessible.'
     },
     {
         name : 'Xpedite CLI',
