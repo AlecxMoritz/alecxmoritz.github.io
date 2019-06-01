@@ -9,19 +9,19 @@ const projects = [
         name : 'Xpedite CLI',
         tagline : 'Express & Sequelize Scaffolding Tool',
         image : './assets/xpedite-cli-sized.png',
-        text : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod placeat quas odit dolorum ducimus ipsa dolorem? Beatae omnis atque, vitae aliquam, tenetur alias et iste libero accusantium architecto magni quae? Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, placeat! A vitae ipsum velit quo quaerat ullam similique omnis ratione quibusdam officiis qui corrupti magni, laudantium deleniti rem eveniet nesciunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure consectetur maxime vel, iste facilis sint odit unde nemo doloremque, natus pariatur ipsum quod reprehenderit omnis reiciendis, hic aliquid accusamus quis?',
+        text : 'Xpedite is a command line tool created in NodeJS, and out of a need to rapidly spin up flexible servers with minimal bloat. The CLI will prompt the user for set up options, and create an Express backend. You can include static hosting, a Sequelize database, and user authentication with custom unique and password values. Xpedite also incorporates several UI libraries to increase usability and user experience.',
     },
     {
         name : 'Showster',
         tagline : 'Angular 7 CRUD App',
         image : './assets/showster-sized.png',
-        text : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod placeat quas odit dolorum ducimus ipsa dolorem? Beatae omnis atque, vitae aliquam, tenetur alias et iste libero accusantium architecto magni quae? Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, placeat! A vitae ipsum velit quo quaerat ullam similique omnis ratione quibusdam officiis qui corrupti magni, laudantium deleniti rem eveniet nesciunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure consectetur maxime vel, iste facilis sint odit unde nemo doloremque, natus pariatur ipsum quod reprehenderit omnis reiciendis, hic aliquid accusamus quis?'
+        text : 'This was a test project for a few Angular, Material, and Sequelize concepts. The Showster client allows users to post reviews of different shows, and is built over a Postgres Sequelize/Express backend, and features a custom Material theme and module. The client operates with a nimble layer of services, and implements guarded routes, and an authorization interceptor. Both client and server also support an admin role, which can delete any post in Showster\'s message board.'
     },
     {
         name : 'shadr',
         tagline : 'Twitter Clone',
         image : './assets/shadr-sized.png',
-        text : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod placeat quas odit dolorum ducimus ipsa dolorem? Beatae omnis atque, vitae aliquam, tenetur alias et iste libero accusantium architecto magni quae? Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, placeat! A vitae ipsum velit quo quaerat ullam similique omnis ratione quibusdam officiis qui corrupti magni, laudantium deleniti rem eveniet nesciunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure consectetur maxime vel, iste facilis sint odit unde nemo doloremque, natus pariatur ipsum quod reprehenderit omnis reiciendis, hic aliquid accusamus quis?'
+        text : 'Shadr is a satirical social media clone CRUD application built in React, with a Postgres Sequelize/Express backend. The UI was created using mostly custom CSS and some Reactstrap components, and is completely mobile friendly. It allows users to sign up, and post about things they are unhappy with, and save any post that resonates with them in their \'Dislikes\'.'
     }
 ];
 const breakPoint = window.matchMedia('(max-width : 770px)');
