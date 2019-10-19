@@ -2,7 +2,7 @@
 
 Initial Creation June 1st 2019 by Alecx Moritz.
 
-This repo is public, clone an experiment as you wish, but please dont take my portfolio and pass it off as yours. 
+This repo is public, clone and experiment as you wish, but please dont take my portfolio and pass it off as yours. 
 
 # CHANGELOG
 
