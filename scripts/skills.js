@@ -1,14 +1,12 @@
-const javaScriptSkills = [ 'React', 'ReactNative', 'Angular', 'NodeJs', 'Express', 'Sequelize', 'Axios' ];
-const dotNetSkills = [ 'C#', 'ASP.NET (Framework)', 'WebAPI (Framework)' ];
-const frontEndSkills = [ 'CSS', 'HTML', 'Bootstrap', 'Material', 'Bulma', 'Radium', 'Styled Components', 'jQuery' ];
-const tools = [ 'yarn', 'pgAdmin', 'npm', 'Postman', 'git', 'Adobe CC', 'Slack' ];
-const misc = [ 'Markdown', 'TypeScript', 'Heroku', 'Firebase' ];
-
+const javaScriptSkills = [ 'React', 'ReactNative', 'Next', 'Gatsby', 'Apollo', 'Angular', 'jQuery', 'Radium', 'Styled Components' ];
+const dotNetSkills = [ 'MongoDB', 'GraphQL', 'Axios', 'Sequelize', 'NodeJs', 'Express', 'http', 'SQL' ];
+const frontEndSkills = [ 'Bootstrap', 'Material', 'Bulma' ];
+const tools = [ 'yarn', 'pgAdmin', 'npm', 'Postman', 'git', 'Adobe CC', 'Slack', 'NoSQLBooster', 'Insomnia' ];
+const misc = [ 'CSS', 'HTML', 'Markdown', 'TypeScript', 'Heroku', 'Firebase', 'C#' ];
 let currentSkillHeader;
 
 const clearSkills = () => {
     let display = document.getElementById('skillDisplay');
-    
     while(display.firstChild) {
         display.removeChild(display.firstChild);
     }
@@ -16,7 +14,6 @@ const clearSkills = () => {
 
 const displaySkills = (skillSet) => {
     let display = document.getElementById('skillDisplay');
-
     skillSet.map(skill => {
         let item = document.createElement('li');
         item.classList.add('is-size-5', 'skill-list-item', 'animated', 'fadeIn')
@@ -26,10 +23,8 @@ const displaySkills = (skillSet) => {
 }
 
 const setSkills = (type, event) => {
-
     if(event) {
     currentSkillHeader.classList.remove('skill-header-active');
-
     let current = document.getElementById(event.target.id);
     current.classList.add('skill-header-active');
     currentSkillHeader = current;
@@ -37,15 +32,15 @@ const setSkills = (type, event) => {
 
     clearSkills();
     switch(type) {
-        case 'javascript' :
+        case 'front-end' :
             displaySkills(javaScriptSkills);
             break;
 
-        case 'dotnet' :
+        case 'back-end' :
             displaySkills(dotNetSkills);
             break;
 
-        case 'frontend' :
+        case 'component-libs' :
             displaySkills(frontEndSkills);
             break;
 
@@ -59,13 +54,10 @@ const setSkills = (type, event) => {
 
         default :
             console.log('something went wrong');
-    }
-}
+    };
+};
 
-setSkills('javascript');
-
-// set active class to javascript skill header
-
+setSkills('front-end');
 let jsSkillHeader = document.getElementById('javascript-header');
 jsSkillHeader.classList.add('skill-header-active');
 currentSkillHeader = jsSkillHeader;

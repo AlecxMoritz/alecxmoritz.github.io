@@ -138,10 +138,29 @@ canvas {
     color : #aa66cc
 }
 
+
 .resume-link {
-    color : #f77ad4;
+    color : white;
 }
 
 .resume-link:hover {
-    color : #aa66cc;
+    color : white;
+}
+
+.resume-button {
+    background-color : #f77ad4;
+    border-color: #f77ad4;
+    color: white;
+    margin-top: 2vh;
+}
+
+.resume-button:hover {
+    background-color : #aa66cc;
+    border-color: #aa66cc;
+    color: white;
+}
+
+.avatar-image {
+    max-height: 35vh;
+    object-fit: contain;
 }
