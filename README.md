@@ -1,6 +1,8 @@
 # Portfolio v5
 
-Initial Creation Spring 2019 by Alecx Moritz.
+Initial Creation June 1st 2019 by Alecx Moritz.
+
+This repo is public, please dont take my portfolio and pass it off as yours. 
 
 # CHANGELOG
 
