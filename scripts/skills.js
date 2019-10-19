@@ -32,11 +32,11 @@ const setSkills = (type, event) => {
 
     clearSkills();
     switch(type) {
-        case 'front-end' :
+        case 'client-side' :
             displaySkills(javaScriptSkills);
             break;
 
-        case 'back-end' :
+        case 'server-side' :
             displaySkills(dotNetSkills);
             break;
 
@@ -57,7 +57,7 @@ const setSkills = (type, event) => {
     };
 };
 
-setSkills('front-end');
+setSkills('client-side');
 let jsSkillHeader = document.getElementById('javascript-header');
 jsSkillHeader.classList.add('skill-header-active');
 currentSkillHeader = jsSkillHeader;
