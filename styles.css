@@ -9,13 +9,13 @@ body, html {
 body::-webkit-scrollbar {
     width: 5px;
 }
- 
+
 body::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
     box-shadow : inset 0 0 6px rgba(0,0,0,0.3);
     background-color : rgb(49, 49, 49);
 }
- 
+
 body::-webkit-scrollbar-thumb {
   background-image: linear-gradient(#f77ad4, #ffbeef);
   outline: 1px solid rgb(201, 58, 177);
@@ -139,12 +139,12 @@ canvas {
 }
 
 
-.resume-link {
-    color : white;
+.project-link {
+    color : #f77ad4;
 }
 
-.resume-link:hover {
-    color : white;
+.project-link:hover {
+    color : #ffade8;
 }
 
 .resume-button {
@@ -158,6 +158,14 @@ canvas {
     background-color : #aa66cc;
     border-color: #aa66cc;
     color: white;
+}
+
+.resume-button-text {
+  color: white;
+}
+
+.resume-button-text:hover {
+  color: white;
 }
 
 .avatar-image {
